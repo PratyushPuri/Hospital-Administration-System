@@ -1,10 +1,10 @@
 # Hospital-Administration-System
 
-## 📊 Project Overview
+## Project Overview
 
 This project analyzes hospital administration data to identify patterns and factors associated with high readmission rates. As a data analyst working on improving patient care quality, this analysis addresses the critical challenge of reducing unnecessary hospital readmissions while optimizing healthcare resource allocation and compliance with healthcare regulations.
 
-## 🎯 Objective
+## Objective
 
 The primary goal is to analyze hospital admission data from Novartis hospital to:
 - Identify patterns contributing to high readmission rates
@@ -12,7 +12,7 @@ The primary goal is to analyze hospital admission data from Novartis hospital to
 - Provide actionable insights for targeted interventions
 - Improve patient outcomes and reduce healthcare costs
 
-## 📁 Dataset Information
+## Dataset Information
 
 **Data Source:** [Hospital Administration Data - Kaggle](https://www.kaggle.com/datasets/shivavashishtha/hospital-administration-data/)
 
@@ -39,7 +39,7 @@ The primary goal is to analyze hospital admission data from Novartis hospital to
 | `diabetesMed` | Indicates if any diabetic medication was prescribed |
 | `readmitted` | Target variable: patient readmitted (<30 days = 1, else = 0) |
 
-## 🔍 Analysis Components
+## Analysis Components
 
 ### Analysis
 - Distribution of readmission rates across different age groups
@@ -53,14 +53,14 @@ The primary goal is to analyze hospital admission data from Novartis hospital to
 - Medication impact on hospital stay length
 - Outpatient visit frequency impact on readmissions
 
-## 🛠️ Tools & Technologies
+## Tools & Technologies
 
 - **Microsoft Excel**: Data cleaning, analysis, and visualization
 - **Power Query**: Data transformation and preprocessing
 - **Pivot Tables**: Summary statistics and cross-tabulation analysis
 - **Excel Functions**: Statistical calculations and data manipulation
 
-## 📈 Key Insights
+## Key Insights
 
 This analysis provides insights for multiple stakeholders:
 - **Hospital Board**: Operational costs, revenue trends, and quality metrics
@@ -69,7 +69,7 @@ This analysis provides insights for multiple stakeholders:
 - **Clinicians**: Treatment outcomes and evidence-based decision-making
 - **Patients**: Improved care quality and reduced readmission risks
 
-## 💡 Business Impact
+## Business Impact
 
 - Enhanced patient care quality through targeted interventions
 - Optimized hospital resource allocation
@@ -84,7 +84,7 @@ This analysis provides insights for multiple stakeholders:
 3. Navigate through different worksheets for various analysis levels
 4. Review pivot tables and charts for visual insights
 
-## 📊 Analysis Methodology
+## Analysis Methodology
 
 1. **Data Cleaning**: Handling missing values, particularly in the weight column
 2. **Exploratory Data Analysis**: Understanding distributions and patterns
@@ -93,16 +93,16 @@ This analysis provides insights for multiple stakeholders:
 5. **Visualization**: Creating charts and dashboards for insights
 6. **Insights & Recommendations**: Actionable findings for stakeholders
 
-## 👤 Author
+## Author
 
 **Pratyush Puri**  
 Data Analyst Intern @ Jobaaj
 
-## 📝 License
+## License
 
 This project is available for educational and analytical purposes.
 
-## 🤝 Acknowledgments
+## Acknowledgments
 
 - Dataset provided by [Shiva Vashishtha on Kaggle](https://www.kaggle.com/datasets/shivavashishtha/hospital-administration-data/)
 - Hospital Administration Case Study Framework
