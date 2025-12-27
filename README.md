@@ -1,5 +1,7 @@
 # Hospital-Administration-System
 
+![HA](https://raw.githubusercontent.com/PratyushPuri/Hospital-Administration-System/refs/heads/main/HA%20Dash.png)
+
 ## Project Overview
 
 This project analyzes hospital administration data to identify patterns and factors associated with high readmission rates. As a data analyst working on improving patient care quality, this analysis addresses the critical challenge of reducing unnecessary hospital readmissions while optimizing healthcare resource allocation and compliance with healthcare regulations.
