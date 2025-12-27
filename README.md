@@ -1,116 +1,91 @@
 # Hospital-Administration-System
 
-![HA](https://raw.githubusercontent.com/PratyushPuri/Hospital-Administration-System/refs/heads/main/HA%20Dash.png)
+<div align="center">
+
+<img src="https://adiinstitute.in/wp-content/uploads/2023/06/Hospital-Admin-4_0.jpg" alt="drawing" width="500"/>
+
+</div>
+
+<!--![HA](https://raw.githubusercontent.com/PratyushPuri/Hospital-Administration-System/refs/heads/main/HA%20Dash.png)-->
 
 ## Project Overview
 
 This project analyzes hospital administration data to identify patterns and factors associated with high readmission rates. As a data analyst working on improving patient care quality, this analysis addresses the critical challenge of reducing unnecessary hospital readmissions while optimizing healthcare resource allocation and compliance with healthcare regulations.
 
-## Objective
+## **Dataset**
 
-The primary goal is to analyze hospital admission data from Novartis hospital to:
-- Identify patterns contributing to high readmission rates
-- Uncover factors associated with patient readmissions within 30 days
-- Provide actionable insights for targeted interventions
-- Improve patient outcomes and reduce healthcare costs
+This project uses a detailed dataset focused on hospital patient visits and administration metrics. You can download it directly to examine the factors related to patient readmission.
 
-## Dataset Information
+**Direct Dataset Link:** [Hospital Administration Data on Kaggle](https://www.kaggle.com/datasets/shivavashishtha/hospital-admission-data)
 
-**Data Source:** [Hospital Administration Data - Kaggle](https://www.kaggle.com/datasets/shivavashishtha/hospital-administration-data/)
+**Dataset Overview & Key Variables:**
+* **Patient & Encounter Identification:** Unique IDs for both the patient (`patient_id`) and the specific hospital visit (`encounter_id`).
+* **Patient Demographics:** Includes `race`, `gender`, `age`, and `weight` (noted to have significant missing data).
+* **Visit & Treatment Details:**
+    * **Stay & Specialty:** `time_in_hospital` (length of stay) and the admitting `medical_specialty`.
+    * **Treatment Intensity:** Metrics for `num_lab_procedures`, `num_procedures`, and `num_medications`.
+* **Historical Utilization:** Counts of prior visits in the past year (`number_outpatient`, `number_emergency`, `number_inpatient`).
+* **Medical Information:** Contains fields for primary and secondary diagnoses (`diag_1` to `diag_5`) and the total `number_diagnoses`.
+* **Medication & Outcome Indicators:**
+    * 25 anonymized columns (`X1` to `X25`) showing various prescribed medications.
+    * Flags for changes in diabetic medication (`change`) and whether diabetic meds were prescribed (`diabetesMed`).
+* **Target Variable:** The key outcome metric `readmitted`, indicating if a patient was readmitted within 30 days.
 
-### Data Dictionary
+This rich dataset allows for analysis of clinical, administrative, and demographic factors to understand patterns and predictors of hospital readmissions.
 
-| Column | Description |
-|--------|-------------|
-| `encounter_id` | Unique identifier of an encounter |
-| `patient_id` | Unique identifier of a patient |
-| `race`, `gender`, `age` | Demographic information |
-| `weight` | Patient's weight (mostly missing, denoted by ?) |
-| `time_in_hospital` | Length of hospital stay in days |
-| `medical_specialty` | Specialty of the admitting physician |
-| `num_lab_procedures` | Number of lab tests performed |
-| `num_procedures` | Number of procedures (other than lab tests) performed |
-| `num_medications` | Number of distinct medications prescribed |
-| `number_outpatient` | Number of outpatient visits in the year preceding the encounter |
-| `number_emergency` | Number of emergency visits in the year preceding the encounter |
-| `number_inpatient` | Number of inpatient visits in the year preceding the encounter |
-| `diag_1` to `diag_5` | Primary and secondary diagnoses codes |
-| `number_diagnoses` | Number of diagnoses entered into the system |
-| `X1` to `X25` | Indicators for various medications |
-| `change` | Indicates if there was a change in diabetic medications |
-| `diabetesMed` | Indicates if any diabetic medication was prescribed |
-| `readmitted` | Target variable: patient readmitted (<30 days = 1, else = 0) |
+## **Analysis**
 
-## Analysis Components
+> Solution File is `HA Data Final Solution.xlsx`
 
-### Analysis
-- Distribution of readmission rates across different age groups
-- Average length of hospital stays by medical specialty
-- Correlation between emergency visits and readmission rates
-- Diabetes patient readmission analysis
-- Impact of diabetic medication changes on readmissions
-- Relationship between lab procedures and readmission rates
-- Demographic analysis of readmission rates (race and gender)
-- Weight category distribution and readmission correlation
-- Medication impact on hospital stay length
-- Outpatient visit frequency impact on readmissions
+This analysis aimed to identify the main factors and patterns of patient readmission within 30 days. It looked at patient demographics, clinical factors, and hospital operations.
 
-## Tools & Technologies
+**Key Analyses Conducted:**
 
-- **Microsoft Excel**: Data cleaning, analysis, and visualization
-- **Power Query**: Data transformation and preprocessing
-- **Pivot Tables**: Summary statistics and cross-tabulation analysis
-- **Excel Functions**: Statistical calculations and data manipulation
+* **Patient Demographic Impact:** Evaluated how **age, gender, and race** relate to readmission rates to find potential disparities in care outcomes.
+* **Clinical & Treatment Factors:** Analyzed the effect of **length of hospital stay (time_in_hospital), medical specialty, number of lab procedures (num_lab_procedures)**, and **medication counts (num_medications)** on the likelihood of readmission.
+* **Disease-Specific Focus:** Investigated readmission patterns for **diabetic patients**, examining the effects of **medication changes (change)** and specific diabetic medication indicators (`X1-X25`).
+* **Prior Utilization & Comorbidities:** Explored links between readmission and **previous hospital visits (outpatient, emergency, inpatient)**, along with the impact of **multiple diagnoses (comorbidities)**.
+* **Operational & Seasonal Trends:** Assessed changes in readmission rates over **time (monthly/seasonal trends)** and across various **discharge dispositions** (where data allowed).
+* **Data Quality & Special Investigations:** Addressed issues like the high rate of **missing weight data** and conducted deeper analyses, such as examining prescribing patterns by **medical specialty** and the combined effect of **weight categories with primary diagnoses**.
 
-## Key Insights
+The results of these analyses provide valuable insights for targeted interventions, better resource allocation, and improved patient care protocols to effectively reduce avoidable hospital readmissions.
 
-This analysis provides insights for multiple stakeholders:
-- **Hospital Board**: Operational costs, revenue trends, and quality metrics
-- **C-Suite Executives**: Capacity planning and resource optimization
-- **Department Heads**: Staffing levels and patient flow improvement
-- **Clinicians**: Treatment outcomes and evidence-based decision-making
-- **Patients**: Improved care quality and reduced readmission risks
+## **Dashboard Summary**
 
-## Business Impact
+This dashboard brings together key metrics to assess and track patient readmission risk factors.
 
-- Enhanced patient care quality through targeted interventions
-- Optimized hospital resource allocation
-- Reduced unnecessary readmissions and associated costs
-- Improved compliance with healthcare regulations
-- Better patient outcomes and hospital reputation
+**Key Performance Indicators (KPIs):**
+*   **Readmission Rate:** A significant **46.22%** of patients were readmitted during the studied period.
+*   **Patient Stay & Health:** The average length of stay is **4.4 days**. Patients have an average of **7.4 diagnoses** and **1.2 prior hospital visits**.
 
-## 🚀 Getting Started
+**Main Visualizations & Insights:**
+*   **Demographic Differences:** Charts for **Readmission by Gender** and **Readmission by Race** show potential demographic variations in outcomes. This allows for focused equity reviews.
+*   **Clinical Drivers:** A **Readmission by Primary Diagnosis** chart points out specific medical conditions linked to the highest readmission risks. This can guide improvements in clinical protocols.
+*   **Risk Relation:** Visual analysis connects key factors such as **Length of Stay** and **Number of Diagnoses** directly to the readmission rate. This helps identify high-risk patients for early intervention.
 
-1. Download the dataset from the Kaggle link provided above
-2. Open the Excel workbook `Hospital_Administration_Analysis.xlsx`
-3. Navigate through different worksheets for various analysis levels
-4. Review pivot tables and charts for visual insights
+This dashboard gives hospital administrators and clinicians a quick view of readmission factors. It supports data-driven choices to improve care continuity and lower unnecessary returns.
 
-## Analysis Methodology
+![HA](https://raw.githubusercontent.com/PratyushPuri/Hospital-Administration-System/refs/heads/main/HA%20Dash.png)
 
-1. **Data Cleaning**: Handling missing values, particularly in the weight column
-2. **Exploratory Data Analysis**: Understanding distributions and patterns
-3. **Statistical Analysis**: Correlation analysis and hypothesis testing
-4. **Segmentation**: Grouping patients by demographics and clinical factors
-5. **Visualization**: Creating charts and dashboards for insights
-6. **Insights & Recommendations**: Actionable findings for stakeholders
+## **How to Use the Readmission Risk Dashboard**
 
-## Author
+This interactive dashboard is made for easy analysis of patient readmission factors.
 
-**Pratyush Puri**  
-Data Analyst Intern @ Jobaaj
+1.  **Open the File:** Start by opening the `HA Data Final Solution.xlsx` file in Microsoft Excel.
 
-## License
+2.  **Navigate & Interact:**
+    *   **Review KPIs:** First, check the key summary metrics at the top: **Readmission Rate (46.22%), Average Length of Stay, and Prior Utilization.**
+    *   **Analyze Charts:** Look at the main visualizations for **Readmission by Gender, Race, and Primary Diagnosis** to find high-risk patient groups.
+    *   **Explore Data:** Click on or hover over chart sections (e.g., a specific diagnosis bar) to see exact percentages and filter related data for a deeper look.
 
-This project is available for educational and analytical purposes.
+3.  **Refresh Data (If Applicable):**
+    *   If the dashboard is linked to an updated backend dataset, refresh the analysis by going to the **Data** tab and selecting **"Refresh All."**
+    *   **Security Note:** If asked about enabling macros or external links, select "Enable Content" only if you trust the source of the file.
 
-## Acknowledgments
 
-- Dataset provided by [Shiva Vashishtha on Kaggle](https://www.kaggle.com/datasets/shivavashishtha/hospital-administration-data/)
-- Hospital Administration Case Study Framework
+## Author & Contact
+- Name: `Pratyush Puri`
+- Contact: `pratyushpuri17@gmail.com` / [LinkedIn](https://www.linkedin.com/in/pratyushpuri)
 
----
-
-*For questions or collaboration opportunities, feel free to reach out!*
 
 
