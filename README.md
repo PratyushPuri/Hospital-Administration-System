@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="https://adiinstitute.in/wp-content/uploads/2023/06/Hospital-Admin-4_0.jpg" alt="drawing" width="500"/>
+<img src="doctor.webp" alt="drawing" width="500"/>
 
 </div>
 
@@ -65,7 +65,7 @@ This dashboard brings together key metrics to assess and track patient readmissi
 
 This dashboard gives hospital administrators and clinicians a quick view of readmission factors. It supports data-driven choices to improve care continuity and lower unnecessary returns.
 
-![HA](https://raw.githubusercontent.com/PratyushPuri/Hospital-Administration-System/refs/heads/main/HA%20Dash.png)
+![HA](HA%20Dash.png)
 
 ## **How to Use the Readmission Risk Dashboard**
 
